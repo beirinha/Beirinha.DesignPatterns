@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Beirinha.DesignPatterns.Creational.Builder.CarroBuilder">
+    <Position X="1.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAgAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Builder\CarroBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Beirinha.DesignPatterns.Creational.Builder.Director">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Builder\Director.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Beirinha.DesignPatterns.Creational.Builder.MotoBuilder">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAgAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Builder\MotoBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Beirinha.DesignPatterns.Creational.Builder.Veiculo">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAgACAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Builder\Veiculo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Beirinha.DesignPatterns.Creational.Builder.VeiculoBuilder" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAgAAAAAAAAAQAAEAAEAAAAAAAA=</HashCode>
+      <FileName>Builder\VeiculoBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

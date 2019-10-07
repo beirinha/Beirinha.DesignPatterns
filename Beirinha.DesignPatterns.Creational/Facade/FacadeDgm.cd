@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Beirinha.DesignPatterns.Creational.Facade.Email">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAAAAAAAAAAgAAAAAAAAAAAAAAAAABAAAAAAAAAAAEA=</HashCode>
+      <FileName>Facade\Email.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Beirinha.DesignPatterns.Creational.Facade.Mail">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Facade\Mail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Beirinha.DesignPatterns.Creational.Facade.MailFormat">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Facade\MailFormat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Beirinha.DesignPatterns.Creational.Facade.MailFormatHTML">
+    <Position X="3.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Facade\MailFormatHTML.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Beirinha.DesignPatterns.Creational.Facade.MailFormatTXT">
+    <Position X="1.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Facade\MailFormatTXT.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Beirinha.DesignPatterns.Creational.Facade.MailMessage">
+    <Position X="6" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAIAAAAEA=</HashCode>
+      <FileName>Facade\MailMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Beirinha.DesignPatterns.Creational.Facade.SMTPSettings">
+    <Position X="8" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAACAAAAAAAAAAAAAAAACAQAAAgEAAAA=</HashCode>
+      <FileName>Facade\SMTPSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
