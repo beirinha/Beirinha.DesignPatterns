@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Beirinha.DesignPatterns.Behavioral.Command.CommandAbstract">
+    <Position X="0.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Command\CommandAbstract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Beirinha.DesignPatterns.Behavioral.Command.Formulario">
+    <Position X="3.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAQAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Command\Formulario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Beirinha.DesignPatterns.Behavioral.Command.Server">
+    <Position X="5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Command\Server.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Beirinha.DesignPatterns.Behavioral.Command.ServerCommand">
+    <Position X="0.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Command\ServerCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
