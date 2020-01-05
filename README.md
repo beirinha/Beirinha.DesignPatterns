@@ -17,7 +17,7 @@ Exemplos de aplicações de padrões.
 - [x] **Command** | Encapsulate a command request as an object
 - [ ] **Interpreter** | A way to include language elements in a program
 - [x] **Iterator** | Sequentially access the elements of a collection
-- [ ] **Mediator** | Defines simplified communication between classes
+- [x] **Mediator** | Defines simplified communication between classes
 - [ ] **Memento** | Capture and restore an object's internal state
 - [ ] **Observer** | A way of notifying change to a number of classes
 - [ ] **State** | Alter an object's behavior when its state changes

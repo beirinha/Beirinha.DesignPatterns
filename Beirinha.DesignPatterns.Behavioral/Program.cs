@@ -1,6 +1,7 @@
 ﻿using Beirinha.DesignPatterns.Behavioral.ChainOfResponsability;
 using Beirinha.DesignPatterns.Behavioral.Command;
 using Beirinha.DesignPatterns.Behavioral.Iterator;
+using Beirinha.DesignPatterns.Behavioral.Mediator;
 using Beirinha.DesignPatterns.Behavioral.Strategy;
 using System;
 
@@ -121,6 +122,24 @@ namespace Beirinha.DesignPatterns.Behavioral
             //Console.ReadLine();
 
             //#endregion
+
+            //#region Mediator
+
+            //ConcreteMediator concreteMediator = new ConcreteMediator();
+            //Suporte suporte = new Suporte(concreteMediator);
+            //Usuario usuario = new Usuario(concreteMediator);
+
+            //concreteMediator.Suporte = suporte;
+            //concreteMediator.Usuario = usuario;
+
+            //suporte.Send("Oi Usuario");
+            //usuario.Send("Formata a máquina");
+
+            //Console.ReadLine();
+
+            //#endregion
+
+
         }
     }
 }
