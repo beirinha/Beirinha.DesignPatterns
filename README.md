@@ -33,5 +33,5 @@ Examples and explanations about DesignPatterns.
 - [x]  **Prototype** | A fully initialized instance to be copied or cloned
 - [x]  **Singleton** | A class of which only a single instance can exist
 
-### Credits for [DevMedia](https://devmedia.com.br) my favorite plataform to study tecnology.
-### Credits for [dofactory](https://www.dofactory.com/net/memento-design-pattern) that's amazing explanation about design patterns, check out.
+### Credits for this course [Curso de Padrões de Projeto](https://www.devmedia.com.br/curso/curso-padroes-de-projeto-com-csharp/376) in [DevMedia](https://www.devmedia.com.br) my favorite plataform to study tecnology.
+### Credits for [DoFactory](https://www.dofactory.com/net/memento-design-pattern) that's amazing explanation about design patterns, check out.
