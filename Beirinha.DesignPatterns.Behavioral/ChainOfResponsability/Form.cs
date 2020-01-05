@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Beirinha.DesignPatterns.Behavioral.ChainOfResponsability
 {
     /// <summary>
     /// ConcreteHandler
     /// </summary>
-    public class Formulario : BaseValidate
+    public class Form : BaseValidate
     {
         public override bool ValidateUser(string name, string password)
         {

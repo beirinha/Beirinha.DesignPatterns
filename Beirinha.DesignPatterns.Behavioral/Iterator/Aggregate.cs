@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Beirinha.DesignPatterns.Behavioral.Iterator
+﻿namespace Beirinha.DesignPatterns.Behavioral.Iterator
 {
     //Aggregate
     public abstract class Aggregate

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Beirinha.DesignPatterns.Creational.Facade
+﻿namespace Beirinha.DesignPatterns.Creational.Facade
 {
-    //Façade
+    //Facade
     public class Email
     {
         private Mail _mail;
@@ -28,7 +24,7 @@ namespace Beirinha.DesignPatterns.Creational.Facade
 
         }
 
-        public void Enviar(string mensagem)
+        public void Send(string mensagem)
         {
             _maiMessage.Message = mensagem;
             _mail.Send(_maiMessage);

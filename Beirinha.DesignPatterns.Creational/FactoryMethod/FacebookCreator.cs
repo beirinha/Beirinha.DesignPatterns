@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Beirinha.DesignPatterns.Creational.FactoryMethod
+﻿namespace Beirinha.DesignPatterns.Creational.FactoryMethod
 {
     /// <summary>
     /// Concrete Creator
     /// </summary>
     public class FacebookCreator : Creator
     {
-        public override Autenticacao CriarInstancia()
+        public override Auth CreateInstance()
         {
-            return new AutenticacaoFacebook();
+            return new AuthFacebook();
         }
     }
 }

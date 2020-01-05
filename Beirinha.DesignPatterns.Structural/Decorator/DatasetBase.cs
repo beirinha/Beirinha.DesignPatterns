@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Beirinha.DesignPatterns.Creational.Decorator
+﻿namespace Beirinha.DesignPatterns.Creational.Decorator
 {
     /// <summary>
     /// Component

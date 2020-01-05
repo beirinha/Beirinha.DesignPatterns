@@ -1,5 +1,8 @@
-﻿using Beirinha.DesignPatterns.Behavioral.ChainOfResponsability;
+﻿using System;
+using System.Collections.Generic;
+using Beirinha.DesignPatterns.Behavioral.ChainOfResponsability;
 using Beirinha.DesignPatterns.Behavioral.Command;
+using Beirinha.DesignPatterns.Behavioral.Interpreter;
 using Beirinha.DesignPatterns.Behavioral.Iterator;
 using Beirinha.DesignPatterns.Behavioral.Mediator;
 using Beirinha.DesignPatterns.Behavioral.Memento;
@@ -8,7 +11,6 @@ using Beirinha.DesignPatterns.Behavioral.State;
 using Beirinha.DesignPatterns.Behavioral.Strategy;
 using Beirinha.DesignPatterns.Behavioral.Template_Method;
 using Beirinha.DesignPatterns.Behavioral.Visitor;
-using System;
 
 namespace Beirinha.DesignPatterns.Behavioral
 {
@@ -16,203 +18,229 @@ namespace Beirinha.DesignPatterns.Behavioral
     {
         static void Main(string[] args)
         {
-            //#region Strategy
+            #region Strategy
 
-            //Console.WriteLine("Initialize Strategy");
+            //First Step
+            Console.WriteLine("Initialize Strategy");
 
-            //long[] inputArray = new long[20];
-            //Random radom = new Random();
+            long[] inputArray = new long[20];
+            Random radom = new Random();
 
-            //for (int i = 0; i < inputArray.Length; i++)
-            //{
-            //    inputArray[i] = radom.Next(100);
-            //}
+            for (int strategy = 0; strategy < inputArray.Length; strategy++)
+            {
+                inputArray[strategy] = radom.Next(100);
+            }
 
-            //foreach (long number in inputArray)
-            //    Console.WriteLine(number);
-            //Console.ReadKey();
+            foreach (long number in inputArray)
+                Console.WriteLine(number);
+            Console.ReadKey();
 
-            ////Maneira incorreta
-            ////Ordenação 1 
-            ////var alg = new BubbleSort();
-            ////alg.Sort(inputArray);
-            ////Console.WriteLine("Números ordenados");
+            //Second Step
+            //Strategy 1
+            var alg = new BubbleSort();
+            alg.Sort(inputArray);
+            Console.WriteLine("sort numbers");
 
-            ////foreach (long number in inputArray)            
-            ////    Console.WriteLine(number);
+            foreach (long number in inputArray)
+                Console.WriteLine(number);
 
-            ////Console.ReadKey();
+            Console.ReadKey();
 
-            //////Ordenação 2
-            ////var alg2 = new SelectionSort();
-            ////alg2.Sort(inputArray);
-            ////Console.WriteLine("Números ordenados");
-            ////foreach (long number in inputArray)            
-            ////    Console.WriteLine(number);
+            //Strategy 2
+            var alg2 = new SelectionSort();
+            alg2.Sort(inputArray);
+            Console.WriteLine("sort numbers");
+            foreach (long number in inputArray)
+                Console.WriteLine(number);
 
-            ////Console.ReadKey();
+            Console.ReadKey();
 
+            //Apply Strategy Patterns
+            Strategy.Context ctx = new Strategy.Context(new SelectionSort());
+            ctx.ContextInterface(inputArray);
+            Console.WriteLine("sort numbers");
 
-            ////Maneira refatorada
-            //Context ctx = new Context(new SelectionSort());
-            //ctx.ContextInterface(inputArray);
-            //Console.WriteLine("Números ordenados");
+            foreach (long number in inputArray)
+                Console.WriteLine(number);
 
-            //foreach (long number in inputArray)
-            //    Console.WriteLine(number);
+            Console.ReadKey();
+            Console.WriteLine("Finalize Strategy" + Environment.NewLine);
 
-            //Console.ReadKey();
+            #endregion
 
-            //Console.WriteLine("Finalize Strategy");
+            #region ChainOfResponsability
 
-            //#endregion
+            Console.WriteLine("ChainOfResponsability Initialize");
 
-            //#region ChainOfResponsability
+            // First Step
+            Validate validate = new Validate();
+            Console.WriteLine(validate.ValidateUser("Test", "Test").ToString());
 
-            /////Chamando classe concreta
-            ////Validacao validar = new Validacao();
-            ////Console.WriteLine(validar.ValidateUser("Teste", "Teste").ToString());
+            ///Apply ChainOfResponsability pattern
+            ChainOfResponsability.Form valform = new ChainOfResponsability.Form();
+            ChainOfResponsability.Server valserver = new ChainOfResponsability.Server();
+            BD valBD = new BD();
 
-            /////Chamando encadeamento
-            //ChainOfResponsability.Formulario valform = new ChainOfResponsability.Formulario();
-            //ChainOfResponsability.Server valserver = new ChainOfResponsability.Server();
-            //BD valBD = new BD();
+            valform.setSucessor(valserver);
+            valserver.setSucessor(valBD);
 
-            //valform.setSucessor(valserver);
-            //valserver.setSucessor(valBD);            
+            Console.WriteLine(valform.ValidateUser("Teste", "Teste").ToString());
 
-            //Console.WriteLine(valform.ValidateUser("Teste", "Teste").ToString());
+            Console.WriteLine("ChainOfResponsability Finalize" + Environment.NewLine);
 
-            //#endregion
+            #endregion
 
-            //#region Command
+            #region Command
 
-            ////Configura Receiver
-            //Command.Server server = new Command.Server();
+            Console.WriteLine("Command Initialize");
 
-            ////Cria comando configurando o receiver.
-            //CommandAbstract cmd = new ServerCommand(server);
-            ////Configura o Invoker
-            //Command.Formulario form = new Command.Formulario();
+            //Configure Receiver
+            Command.Server server = new Command.Server();
 
-            //form.SetCommand(cmd);
-            //form.ClickValidate();
-            //Console.ReadLine();
+            //Create command and configure receiver.
+            CommandAbstract cmd = new ServerCommand(server);
 
-            //#endregion
+            //Configure invoker
+            Command.Formulario form = new Command.Formulario();
 
-            //#region Iterator
+            form.SetCommand(cmd);
+            form.ClickValidate();
+            Console.WriteLine("Command Finalize" + Environment.NewLine);
+            Console.ReadLine();
 
-            ////Cria Concrete Aggregate
-            //Equipe equipe = new Equipe();
-            //equipe[0] = "Luiz";
-            //equipe[0] = "Alex";
-            //equipe[0] = "Rodrigo";
-            //equipe[0] = "Renan";
+            #endregion
 
-            ////Cria Iterator
-            //ConcreteIterator i = new ConcreteIterator(equipe);
+            #region Iterator
 
-            ////Iterar pela coleção
-            //Console.WriteLine("Listando membros da Equipe");
+            Console.WriteLine("Iterator Initialize");
 
-            //Object item = i.First();
+            //Create concrete aggregate
+            Team team = new Team();
+            team[0] = "Luiz";
+            team[0] = "Alex";
+            team[0] = "Rodrigo";
+            team[0] = "Renan";
 
-            //while(item != null)
-            //{
-            //    Console.WriteLine(item);
-            //    item = i.Next();
-            //}
+            ConcreteIterator i = new ConcreteIterator(team);
 
-            //Console.ReadLine();
+            Console.WriteLine("Show team's members");
 
-            //#endregion
+            Object item = i.First();
 
-            //#region Mediator
+            while (item != null)
+            {
+                Console.WriteLine(item);
+                item = i.Next();
+            }
 
-            //ConcreteMediator concreteMediator = new ConcreteMediator();
-            //Suporte suporte = new Suporte(concreteMediator);
-            //Usuario usuario = new Usuario(concreteMediator);
+            Console.WriteLine("Iterator Finalize" + Environment.NewLine);
+            Console.ReadLine();
 
-            //concreteMediator.Suporte = suporte;
-            //concreteMediator.Usuario = usuario;
+            #endregion
 
-            //suporte.Send("Oi Usuario");
-            //usuario.Send("Formata a máquina");
+            #region Mediator
 
-            //Console.ReadLine();
+            Console.WriteLine("Mediator Initialize");
 
-            //#endregion
+            ConcreteMediator concreteMediator = new ConcreteMediator();
+            Support support = new Support(concreteMediator);
+            User user = new User(concreteMediator);
 
-            //#region Memento
+            concreteMediator.Suporte = support;
+            concreteMediator.Usuario = user;
 
-            ////Cria o originator
-            //Originator pessoa = new Originator();
-            //pessoa.State = "Fechado";
+            support.Send("Hello user");
+            user.Send("Hello support");
 
-            ////Cria o caretaker que intermedia
-            //Caretaker caretaker = new Caretaker();
-            //caretaker.Memento = pessoa.CreateMemento();
+            Console.WriteLine("Mediator Finalize" + Environment.NewLine);
+            Console.ReadLine();
 
-            ////Mostra estado atual
-            //pessoa.State = "Aberto";
-            //Console.WriteLine("Estado atual:" + pessoa.State);
+            #endregion
 
-            ////Mostra estado recuperado do memento
-            //pessoa.setMemento(caretaker.Memento);
-            //Console.WriteLine("Estado restaurado: " + pessoa.State);
+            #region Memento
 
-            //#endregion
+            Console.WriteLine("Memento Initialize");
 
-            //#region Observer
+            //Create originator
+            Originator people = new Originator();
+            people.State = "Bored";
 
-            //Balance balanco = new Balance();
-            //Sale venda = new Sale(balanco);
+            //Create caretaker
+            Caretaker caretaker = new Caretaker();
+            caretaker.Memento = people.CreateMemento();
 
-            //balanco.Attach(venda);
+            people.State = "Happy";
+            Console.WriteLine("Actual State:" + people.State);
 
-            //balanco.Iniciar();
-            //balanco.Notify();
+            people.setMemento(caretaker.Memento);
+            Console.WriteLine("Restore State: " + people.State);
 
-            //balanco.Finalizar();
-            //balanco.Notify();
+            Console.WriteLine("Memento Finalize" + Environment.NewLine);
 
-            //venda.Iniciar();
+            #endregion
 
-            ////After remove observer
-            //balanco.Detach(venda);
+            #region Observer
 
-            //balanco.Iniciar();
-            //balanco.Notify();
+            Console.WriteLine("Observer Initialize");
 
-            //venda.Iniciar();
+            Balance balanco = new Balance();
+            Sale venda = new Sale(balanco);
 
-            //Console.ReadLine();
+            balanco.Attach(venda);
 
-            //#endregion
+            balanco.Iniciar();
+            balanco.Notify();
 
-            //#region State
+            balanco.Finalizar();
+            balanco.Notify();
 
-            //Connection connection = new Connection(new ConnectionOpened());
+            venda.Iniciar();
 
-            //connection.Open();
-            //connection.Close();
+            //After remove observer
+            balanco.Detach(venda);
 
-            //Console.ReadLine();
+            balanco.Iniciar();
+            balanco.Notify();
 
-            //#endregion
+            venda.Iniciar();
 
-            //#region Template Method
+            Console.WriteLine("Observer Finalize" + Environment.NewLine);
+            Console.ReadLine();
 
-            //Correction proofCorrecion = new ProofCorrection();
-            //proofCorrecion.Process();
+            #endregion
 
-            //Correction writingCorrection = new WritingCorrection();
-            //writingCorrection.Process();
+            #region State
 
-            //#endregion
+            Console.WriteLine("State Initialize");
+
+            Connection connection = new Connection(new ConnectionOpened());
+
+            connection.Open();
+            connection.Close();
+
+            Console.WriteLine("State Finalize" + Environment.NewLine);
+            Console.ReadLine();
+
+            #endregion
+
+            #region Template Method
+
+            Console.WriteLine("Template Method Initialize");
+
+            Correction proofCorrecion = new ProofCorrection();
+            proofCorrecion.Process();
+
+            Correction writingCorrection = new WritingCorrection();
+            writingCorrection.Process();
+
+            Console.WriteLine("Template Method Finalize" + Environment.NewLine);
+            Console.ReadLine();
+
+            #endregion
 
             #region Visitor
+
+            Console.WriteLine("Visitor Initialize");
 
             //Config structure
             ObjectStructure objectStructure = new ObjectStructure();
@@ -227,7 +255,33 @@ namespace Beirinha.DesignPatterns.Behavioral
             objectStructure.Accept(concreteVisitor1);
             objectStructure.Accept(concreteVisitor2);
 
+            Console.WriteLine("Visitor Finalize" + Environment.NewLine);
             Console.ReadLine();
+
+            #endregion
+
+            #region Interpreter
+
+            Console.WriteLine("Interpreter Initialize");
+
+            string roman = "MCMXXVIII";
+            Interpreter.Context context = new Interpreter.Context(roman);
+
+            List<Expression> tree = new List<Expression>();
+            tree.Add(new ThousandExpression());
+            tree.Add(new HundredExpression());
+            tree.Add(new TenExpression());
+            tree.Add(new OneExpression());
+
+            foreach (Expression exp in tree)
+            {
+                exp.Interpret(context);
+            }
+
+            Console.WriteLine("{0} = {1}", roman, context.Output);
+
+            Console.WriteLine("Interpreter Finalize" + Environment.NewLine);
+            Console.ReadKey();
 
             #endregion
         }

@@ -8,8 +8,7 @@ namespace Beirinha.DesignPatterns.Creational.Facade
 
         public void Send(MailMessage message)
         {
-            //Usando configuração SMTP
-            Console.WriteLine("Enviando Mensagem...");
+            Console.WriteLine("Sending Message...");
             Console.WriteLine(message.Message);
         }
 

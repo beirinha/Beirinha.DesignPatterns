@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Beirinha.DesignPatterns.Creational.Composite
 {
     /// <summary>
     /// Composite
     /// </summary>
-    public class Formulario : Component
+    public class Form : Component
     {
         private List<Component> _children = new List<Component>();
 
-        public Formulario(string name ) : base(name)
+        public Form(string name ) : base(name)
         {
 
         }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Beirinha.DesignPatterns.Behavioral.Memento
+﻿namespace Beirinha.DesignPatterns.Behavioral.Memento
 {
     public class Memento
     {

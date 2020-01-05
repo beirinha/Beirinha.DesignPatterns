@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Beirinha.DesignPatterns.Behavioral.Iterator
 {
     //Concrete Aggregate
-    public class Equipe : Aggregate
+    public class Team : Aggregate
     {
         private List<string> _items = new List<string>();
 

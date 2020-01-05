@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Beirinha.DesignPatterns.Creational.Decorator
 {
@@ -8,14 +6,14 @@ namespace Beirinha.DesignPatterns.Creational.Decorator
     {
         public override void Write()
         {
-            Console.WriteLine("Método DataSetDecorator.Write() invocado");
+            Console.WriteLine("Method DataSetDecorator.Write() call");
             this._datasetbase.Write();
         }
 
         //Decorando com novas funcionalidades
         public void WriteXML()
         {
-            Console.WriteLine("Método DataSetDecorator.WriteXML() invocado");
+            Console.WriteLine("Method DataSetDecorator.WriteXML() call");
         }
     }
 }

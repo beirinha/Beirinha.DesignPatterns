@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Beirinha.DesignPatterns.Creational.Composite
 {
@@ -11,9 +9,9 @@ namespace Beirinha.DesignPatterns.Creational.Composite
         {
         }
 
-        public override void Add(Component c)
+        public override void Add(Component component)
         {
-            Console.WriteLine("Não é possivel adicionar elementos a este componente");
+            Console.WriteLine("It's not possible add this componente");
         }
 
         public override void Display()
@@ -21,9 +19,9 @@ namespace Beirinha.DesignPatterns.Creational.Composite
             Console.WriteLine(_name);
         }
 
-        public override void Remove(Component c)
+        public override void Remove(Component component)
         {
-            Console.WriteLine("Não é possivel remover elementos a este componente");            
+            Console.WriteLine("It's not possible remove this element");            
         }
     }
 }

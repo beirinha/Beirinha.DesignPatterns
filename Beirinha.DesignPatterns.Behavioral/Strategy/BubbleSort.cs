@@ -14,21 +14,6 @@
                     }
                 }
             }
-        }
-
-        // Pull Members UP para classe abstrata
-        //private void Swap(ref long valOne, ref long valTwo)
-        //{
-        //    valOne = valOne + valTwo;
-        //    valTwo = valOne - valTwo;
-        //    valOne = valOne - valTwo;
-        //}
-
-        //private void SwapWithTemp(ref long valOne, ref long valTwo)
-        //{
-        //    long temp = valOne;
-        //    valOne = valTwo;
-        //    valTwo = temp;
-        //}
+        }       
     }
 }

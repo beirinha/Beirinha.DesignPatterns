@@ -9,7 +9,6 @@
             
         public MailMessage(MailFormat format)
         {
-            //Formatar mensagem aqui...
             this._message = Message;
         }
     }

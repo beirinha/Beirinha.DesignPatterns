@@ -18,105 +18,103 @@ namespace Beirinha.DesignPatterns.Creational
             #region Abstract Factory
             Console.WriteLine("Abstract Factory initialize");
 
-            //Maneira incorreta
-            //SqlCommand cmd = new SqlCommand();
-            //SqlConection cnn = new SqlConection();
-            //cmd.Execute();
+            //Step 1
+            SqlCommand cmd = new SqlCommand();
+            SqlConection cnn = new SqlConection();
+            cmd.Execute();
 
-            //Maneira melhorada
+            //Apply Abstract Factory pattern
             DbFactory db = new OracleFactory();
             var con = db.createConnection();
             con.Open();
-            var cmd = db.createCommand();
-            cmd.Execute();
+            var command = db.createCommand();
+            command.Execute();
 
-            Console.WriteLine("Abstract Factory finalize");
+            Console.WriteLine("Abstract Factory finalize" + Environment.NewLine);
             #endregion
 
             #region Builder
             Console.WriteLine("Builder initialize");
 
-            //Maneira incorreta, implementando diretamente na classe concreta.
-            //var carro = new Veiculo("Carro Passeio");
-            //carro["motor"] = "127c";
-            //carro["portas"] = "4";
-            //carro["pneus"] = "4";
-            //carro.Mostrar();
-            //Console.ReadLine();
+            //Step 1
+            var car = new Auto("Car");
+            car["gear"] = "127c";
+            car["doors"] = "4";
+            car["tires"] = "4";
+            car.Show();
+            Console.ReadLine();
 
-            //var moto = new Veiculo("Motocicleta");
-            //moto["motor"] = "50c";
-            //moto["portas"] = "0";
-            //moto["pneus"] = "2";
-            //moto.Mostrar();
-            //Console.ReadLine();
+            var bike = new Auto("bike");
+            bike["gear"] = "50c";
+            bike["doors"] = "0";
+            bike["tires"] = "2";
+            bike.Show();
+            Console.ReadLine();
 
-            //Maneira correta
-            VeiculoBuilder builder;
+            //Apply Builder pattern
+            AutoBuilder builder;
             var director = new Director();
 
-            //Cria produto Carro
-            builder = new CarroBuilder();
+            builder = new CarBuilder();
             director.Construct(builder);
-            builder.Veiculo.Mostrar();
+            builder.Auto.Show();
 
-            //Cria produto moto
-            builder = new MotoBuilder();
+            builder = new BikeBuilder();
             director.Construct(builder);
-            builder.Veiculo.Mostrar();
+            builder.Auto.Show();
 
-            Console.WriteLine("Builder finalize");
+            Console.WriteLine("Builder finalize" + Environment.NewLine);
             #endregion
 
             #region Factory
-            Console.WriteLine("Factory Method");
+            Console.WriteLine("Factory Method Initialize");
 
-            //Maneira incorreta, implementando diretamente na classe concreta.
-            //var login = new AutenticacaoGoogle();
-            //login.Autenticar();
-            //Console.ReadLine();
+            //Step 1
+            var login = new AuthGoogle();
+            login.Authorize();
+            Console.ReadLine();
 
-            //Maneira Melhorada
+            //Apply Factory
             Creator[] creators = new Creator[2];
             creators[0] = new FacebookCreator();
             creators[1] = new GoogleCreator();
 
             foreach (Creator c in creators)
             {
-                Autenticacao aut = c.CriarInstancia(); //Factory Method
-                aut.Autenticar();
+                Auth aut = c.CreateInstance(); //Factory Method
+                aut.Authorize();
             }
             Console.ReadLine();
 
-            Console.WriteLine("Factory Finalize");
+            Console.WriteLine("Factory Finalize" +Environment.NewLine);
             #endregion
 
             #region Prototype
             Console.WriteLine("Prototype initialize");
-            Livro p1 = new Livro(1, "Design Patterns - Livro", 20.00);
-            Livro c1 = (Livro)p1.Clone();
-            Console.WriteLine(c1.Descricao);
+            Book p1 = new Book(1, "Design Patterns - Book", 20.00);
+            Book c1 = (Book)p1.Clone();
+            Console.WriteLine(c1.Description);
 
             DVD p2 = new DVD(2, "Design Patterns - DVD", 25.00);
             DVD c2 = (DVD)p2.Clone();
-            Console.WriteLine(c2.Descricao);
-            Console.WriteLine("Prototype Finalize");
+            Console.WriteLine(c2.Description);
+            Console.WriteLine("Prototype Finalize" +Environment.NewLine);
             Console.ReadKey();
             #endregion
 
             #region Singleton
-            Console.WriteLine("Singleton");
-            var con1 = ConexaoBD.Instance();
+            Console.WriteLine("Singleton Initialize");
+            var con1 = ConnectionBD.Instance();
             con1.stringConexao = "SQLServer";
             con1.Open();
-            var con2 = ConexaoBD.Instance();
+            var con2 = ConnectionBD.Instance();
             con2.stringConexao = "Oracle";
             con2.Open();
 
             if (con1.Equals(con2))
-                Console.WriteLine("Instancias Iguais");
+                Console.WriteLine("Equals Instances");
 
-            Console.WriteLine("Singleton Finalize");
+            Console.WriteLine("Singleton Finalize" + Environment.NewLine);
             Console.ReadKey();
             #endregion           
         }

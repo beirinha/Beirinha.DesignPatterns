@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Beirinha.DesignPatterns.Creational.Abstract_Factory
+﻿namespace Beirinha.DesignPatterns.Creational.Abstract_Factory
 {
     /// <summary>
     /// Concrete Factory

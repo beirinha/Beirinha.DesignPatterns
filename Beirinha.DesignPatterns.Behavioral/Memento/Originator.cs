@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Beirinha.DesignPatterns.Behavioral.Memento
 {
-    
+
     public class Originator
     {
         private string _state;
@@ -24,7 +22,7 @@ namespace Beirinha.DesignPatterns.Behavioral.Memento
 
         public void setMemento(Memento memento)
         {
-            Console.WriteLine("restaurando o estado...");
+            Console.WriteLine("restore state...");
             State = memento.State;
         }
     }

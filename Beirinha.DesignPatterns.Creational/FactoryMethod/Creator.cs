@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Beirinha.DesignPatterns.Creational.FactoryMethod
+﻿namespace Beirinha.DesignPatterns.Creational.FactoryMethod
 {
     /// <summary>
-    /// Creator define o Factory Method Abstrato
+    /// Creator define o Factory Method Abstract
     /// </summary>
     public abstract class Creator
     {
-        public abstract Autenticacao CriarInstancia();
+        public abstract Auth CreateInstance();
     }
 }

@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Beirinha.DesignPatterns.Creational.Bridge
 {
-    public abstract class ExportacaoBridge
+    public abstract class ExportationBridge
     {
-        public abstract void Exportar();
+        public abstract void Export();
     }
 }

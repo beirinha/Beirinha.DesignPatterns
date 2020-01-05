@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Beirinha.DesignPatterns.Behavioral.Mediator
 {
-    public class Suporte : Colleague
+    public class Support : Colleague
     {
-        public Suporte(Mediador mediador) : base(mediador)
+        public Support(Mediador mediador) : base(mediador)
         {
 
         }

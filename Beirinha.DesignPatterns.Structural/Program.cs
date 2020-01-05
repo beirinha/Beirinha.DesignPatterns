@@ -1,11 +1,12 @@
-﻿using Beirinha.DesignPatterns.Creational.Bridge;
+﻿using System;
+using Beirinha.DesignPatterns.Creational.Bridge;
 using Beirinha.DesignPatterns.Creational.Composite;
 using Beirinha.DesignPatterns.Creational.Decorator;
 using Beirinha.DesignPatterns.Creational.Facade;
 using Beirinha.DesignPatterns.Structural.Adapter;
 using Beirinha.DesignPatterns.Structural.Flyweight;
 using Beirinha.DesignPatterns.Structural.Proxy;
-using System;
+
 
 namespace Beirinha.DesignPatterns.Structural
 {
@@ -17,124 +18,136 @@ namespace Beirinha.DesignPatterns.Structural
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            //#region Adapter
+            #region Adapter
 
-            ////Target target = new Target();
-            ////Target target = new Adaptee(); //Não consigo usar o Adaptee
-            //Target target = new Adapter.Adapter();
-            //target.Request();
-            //Console.Read();
+            Console.WriteLine("Adapter initialize ");
 
-            //#endregion
+            Target target = new Target();
+            Target target2 = new Adaptee(); 
 
-            //#region Bridge
+            Target target3 = new Adapter.Adapter();
+            target.Request();
+            Console.ReadKey();
 
-            //Console.WriteLine("Bridge initialize ");
+            Console.WriteLine("Adapter Finalize " + Environment.NewLine);
 
-            ////Maneira incorreta
-            ////Exportacao exp = new ExportacaoDOC();
-            ////exp.Exportar();
+            #endregion
 
-            ////Maneira melhorada, usando a Exportacao refinada
-            //Exportacao exportacao = new ExportacaoEx();
+            #region Bridge
 
-            ////Injetando o objeto de implementação
-            //exportacao.Implementor = new ExportacaoPDF();
-            //exportacao.Exportar();
+            Console.WriteLine("Bridge initialize ");
 
-            //Console.WriteLine("Bridge finalize");
-            //Console.ReadKey();
+            //Step 1
+            ExportationBridge exp = new ExportationDOC();
+            exp.Export();
 
-            //#endregion
+            //Apply Brige Pattern
+            Exportation exportacao = new ExportationEx();
 
-            //#region Composite
+            //Inject object
+            exportacao.Implementor = new ExportationPDF();
+            exportacao.Export();
 
-            //Console.WriteLine("Composite initialize ");
+            Console.WriteLine("Bridge finalize" + Environment.NewLine);
+            Console.ReadKey();
 
-            //var form = new Formulario("Cadastro Clientes");
-            //form.Add(new Button("Incluir"));
-            //form.Add(new Button("Consultar"));
-            //form.Add(new TextBox("Nome"));
-            //form.Add(new TextBox("Fone"));
-            //form.Display();
+            #endregion
 
-            //Console.WriteLine("Composite finalize");
-            //Console.ReadKey();
+            #region Composite
 
-            //#endregion
+            Console.WriteLine("Composite initialize");
 
-            //#region Decorator 
+            var form = new Form("Cadastro Clientes");
+            form.Add(new Button("Incluir"));
+            form.Add(new Button("Consultar"));
+            form.Add(new TextBox("Nome"));
+            form.Add(new TextBox("Fone"));
+            form.Display();
 
-            //Console.WriteLine("Decorator initialize ");
+            Console.WriteLine("Composite finalize" + Environment.NewLine);
+            Console.ReadKey();
 
-            ////Maneira incorreta
-            //var dec = new DataSet();
-            //dec.Write();
+            #endregion
 
-            //DataSet c = new DataSet();
-            ////Cria decorator.
-            //DataSetConcreteDecorator d = new DataSetConcreteDecorator();
+            #region Decorator 
 
-            ////Setando objeto a ser decorado
-            //d.setDatasetbase(c);
-            //d.Write();
-            //d.WriteXML();
+            Console.WriteLine("Decorator initialize");
 
-            //Console.WriteLine("Decorator finalize");
-            //Console.ReadKey();
+            //Step 1
+            var dec = new DataSet();
+            dec.Write();
 
-            //#endregion
+            //Apply Decorator
+            DataSet c = new DataSet();            
+            DataSetConcreteDecorator d = new DataSetConcreteDecorator();
 
-            //#region Facade 
+            //Setando objeto a ser decorado
+            d.setDatasetbase(c);
+            d.Write();
+            d.WriteXML();
 
-            //Console.WriteLine("Facade initialize ");
+            Console.WriteLine("Decorator finalize" + Environment.NewLine);
+            Console.ReadKey();
 
-            ////Sem fachada
-            //var email = new Mail(new SMTPSettings());
-            //var msg = new MailMessage(new MailFormatTXT());
-            //msg.Message = "Olá mundo";
-            //email.Send(msg);
-            //Console.ReadKey();
+            #endregion
 
-            ////Com Fachada
-            //var emailFachada = new Email();
-            //emailFachada.Enviar("Ola Mundo");
+            #region Facade 
 
-            //Console.WriteLine("Facade finalize");
-            //Console.ReadKey();
+            Console.WriteLine("Facade initialize");
 
-            //#endregion
+            //Step 1
+            var email = new Mail(new SMTPSettings());
+            var msg = new MailMessage(new MailFormatTXT());
+            msg.Message = "Hello world";
+            email.Send(msg);
+            Console.ReadKey();
 
-            //#region Flyweight
+            //Apply Facade pattern
+            var emailFachada = new Email();
+            emailFachada.Send("Hello world");
 
-            //int ext = 10;
+            Console.WriteLine("Facade finalize");
+            Console.ReadKey();
 
-            //FlyweightFactory factory = new FlyweightFactory();
-            //FlyweightAbstract f1 = factory.GetFlyweight("A");
-            //f1.Operation(ext++);
-            //FlyweightAbstract f2 = factory.GetFlyweight("B");
-            //f2.Operation(ext++);
-            //FlyweightAbstract f3 = factory.GetFlyweight("C");
-            //f3.Operation(ext++);
-            //FlyweightAbstract f4 = new UnsharedConcreteFlyweight();
-            //f4.Operation(ext++);
+            #endregion
 
-            //Console.ReadKey();
+            #region Flyweight
 
-            //#endregion
+            Console.WriteLine("Flyweight initialize");
+
+            int ext = 10;
+
+            FlyweightFactory factory = new FlyweightFactory();
+            FlyweightAbstract f1 = factory.GetFlyweight("A");
+            f1.Operation(ext++);
+            FlyweightAbstract f2 = factory.GetFlyweight("B");
+            f2.Operation(ext++);
+            FlyweightAbstract f3 = factory.GetFlyweight("C");
+            f3.Operation(ext++);
+            FlyweightAbstract f4 = new UnsharedConcreteFlyweight();
+            f4.Operation(ext++);
+
+            Console.WriteLine("Flyweight finalize" + Environment.NewLine);
+            Console.ReadKey();
+
+            #endregion
 
             #region Proxy
 
-            //Maneira chamando classe Concreta.
+            Console.WriteLine("Proxy initialize");
+
+            //Step 1
             var calc = new Calc();
             var r = calc.Somar(3, 5);
             Console.WriteLine(r.ToString());
             Console.ReadLine();
 
-            //Maneira com Proxy
+            //Aplly Proxy Pattern
             var calcProxy = new CalcProxy();
             var r2 = calcProxy.Somar(3, 5);
             Console.WriteLine(r2.ToString());
+
+            Console.WriteLine("Proxy finalize" + Environment.NewLine);
             Console.ReadLine();
 
             #endregion

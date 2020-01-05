@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Beirinha.DesignPatterns.Creational.Prototype
+﻿namespace Beirinha.DesignPatterns.Creational.Prototype
 {
     /// <summary>
     /// Protype
@@ -11,14 +7,14 @@ namespace Beirinha.DesignPatterns.Creational.Prototype
     {
 
         public int Id { get; set; }
-        public string Descricao { get; set; }
-        public double Preco { get; set; }
+        public string Description { get; set; }
+        public double Price { get; set; }
 
-        public Item(int id, string descricao, double preco)
+        public Item(int id, string description, double price)
         {
             this.Id = id;
-            this.Descricao = descricao;
-            this.Preco = preco;
+            this.Description = description;
+            this.Price = price;
         }
 
         //clonar

@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Beirinha.DesignPatterns.Behavioral.Iterator
 {
     //Concrete Iterator
     public class ConcreteIterator : Iterator
     {
-        private Equipe _aggregate;
+        private Team _aggregate;
         private int current = 0;
-        public ConcreteIterator(Equipe aggregate)
+        public ConcreteIterator(Team aggregate)
         {
             _aggregate = aggregate;
         }

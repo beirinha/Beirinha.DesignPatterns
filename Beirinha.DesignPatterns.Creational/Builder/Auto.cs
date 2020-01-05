@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Beirinha.DesignPatterns.Creational.Builder
 {
     /// <summary>
     /// Concrete Product
     /// </summary>
-    public class Veiculo
+    public class Auto
     {
         private string _tipo;
         private Dictionary<string, string> _parts = new Dictionary<string, string>();
                 
-        public Veiculo(string tipo)
+        public Auto(string tipo)
         {
             this._tipo = tipo;
         }
@@ -28,12 +27,12 @@ namespace Beirinha.DesignPatterns.Creational.Builder
             set { _parts[key] = value; }
         }
 
-        public void Mostrar()
+        public void Show()
         {
-            Console.WriteLine($"Tipo: {_tipo}");
-            Console.WriteLine($"Motor: {_parts["motor"]}");
-            Console.WriteLine($"Pneus: {_parts["pneus"]}");
-            Console.WriteLine($"Portas: {_parts["portas"]}");
+            Console.WriteLine($"Type: {_tipo}");
+            Console.WriteLine($"Gear: {_parts["gear"]}");
+            Console.WriteLine($"Tires: {_parts["tires"]}");
+            Console.WriteLine($"Doors: {_parts["doors"]}");
         }
 
     }

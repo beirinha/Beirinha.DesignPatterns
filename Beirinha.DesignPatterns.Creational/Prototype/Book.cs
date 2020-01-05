@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Beirinha.DesignPatterns.Creational.Prototype
+﻿namespace Beirinha.DesignPatterns.Creational.Prototype
 {
     /// <summary>
     /// Concrete Prototype
     /// </summary>
-    public class Livro : Item
+    public class Book : Item
     {
-        public Livro(int id, string descricao, double preco)
+        public Book(int id, string descricao, double preco)
             : base(id, descricao, preco)
         {
 

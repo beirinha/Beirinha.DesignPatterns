@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Beirinha.DesignPatterns.Structural.Adapter
+﻿namespace Beirinha.DesignPatterns.Structural.Adapter
 {
-    ///transforma Adaptee no Target
+    ///Transform Adaptee in Target
     public class Adapter : Target
     {
         private Adaptee _adaptee = new Adaptee();

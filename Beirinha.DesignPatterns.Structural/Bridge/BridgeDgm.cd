@@ -1,38 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Beirinha.DesignPatterns.Creational.Bridge.Exportacao">
+  <Class Name="Beirinha.DesignPatterns.Creational.Bridge.Exportation">
     <Position X="3.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAACAAAAAA=</HashCode>
-      <FileName>Bridge\Exportacao.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAIAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Bridge\Exportation.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Beirinha.DesignPatterns.Creational.Bridge.ExportacaoBridge">
+  <Class Name="Beirinha.DesignPatterns.Creational.Bridge.ExportationBridge">
     <Position X="4.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Bridge\ExportacaoBridge.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Bridge\ExportarionBridge.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Beirinha.DesignPatterns.Creational.Bridge.ExportacaoDOC">
+  <Class Name="Beirinha.DesignPatterns.Creational.Bridge.ExportationDOC">
     <Position X="5.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Bridge\ExportacaoDOC.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Bridge\ExportationDOC.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Beirinha.DesignPatterns.Creational.Bridge.ExportacaoEx">
+  <Class Name="Beirinha.DesignPatterns.Creational.Bridge.ExportationEx">
     <Position X="3.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Bridge\ExportacaoEx.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Bridge\ExportationEx.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Beirinha.DesignPatterns.Creational.Bridge.ExportacaoPDF">
+  <Class Name="Beirinha.DesignPatterns.Creational.Bridge.ExportationPDF">
     <Position X="3.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Bridge\ExportacaoPDF.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Bridge\ExportationPDF.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

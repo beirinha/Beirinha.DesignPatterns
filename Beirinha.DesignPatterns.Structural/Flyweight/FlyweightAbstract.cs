@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Beirinha.DesignPatterns.Structural.Flyweight
+﻿namespace Beirinha.DesignPatterns.Structural.Flyweight
 {
     public abstract class FlyweightAbstract
     {

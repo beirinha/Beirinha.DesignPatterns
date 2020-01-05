@@ -1,7 +1,7 @@
 ﻿namespace Beirinha.DesignPatterns.Behavioral.Strategy
 {
-    /// <summary>
-    /// O meio de campo entre a classe cliente e a estrategia
+    /// <summary>    
+    /// Mediator of classe client and strategy
     /// </summary>
     public class Context
     {

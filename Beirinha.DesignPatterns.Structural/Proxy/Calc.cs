@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Beirinha.DesignPatterns.Structural.Proxy
+﻿namespace Beirinha.DesignPatterns.Structural.Proxy
 {
     /// <summary>
     /// RealSubject 

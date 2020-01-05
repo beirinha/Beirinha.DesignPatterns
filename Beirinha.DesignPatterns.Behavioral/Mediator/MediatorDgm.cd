@@ -21,18 +21,18 @@
       <FileName>Mediator\Mediador.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Beirinha.DesignPatterns.Behavioral.Mediator.Suporte">
+  <Class Name="Beirinha.DesignPatterns.Behavioral.Mediator.Support">
     <Position X="3.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
-      <FileName>Mediator\Suporte.cs</FileName>
+      <FileName>Mediator\Support.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Beirinha.DesignPatterns.Behavioral.Mediator.Usuario">
+  <Class Name="Beirinha.DesignPatterns.Behavioral.Mediator.User">
     <Position X="1.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
-      <FileName>Mediator\Usuario.cs</FileName>
+      <FileName>Mediator\User.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

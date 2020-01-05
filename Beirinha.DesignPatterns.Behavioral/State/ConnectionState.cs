@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Beirinha.DesignPatterns.Behavioral.State
+﻿namespace Beirinha.DesignPatterns.Behavioral.State
 {
     /// <summary>
     /// State

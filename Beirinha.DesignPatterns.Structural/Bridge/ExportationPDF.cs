@@ -5,11 +5,11 @@ namespace Beirinha.DesignPatterns.Creational.Bridge
     /// <summary>
     /// Concrete Bridge
     /// </summary>
-    public class ExportacaoDOC : ExportacaoBridge
+    public class ExportationPDF : ExportationBridge
     {
-        public override void Exportar()
+        public override void Export()
         {
-            Console.WriteLine("Exportando DOC...");
+            Console.WriteLine("Export PDF...");
         }
     }
 }

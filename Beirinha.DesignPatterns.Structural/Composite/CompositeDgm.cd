@@ -14,11 +14,11 @@
       <FileName>Composite\Component.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Beirinha.DesignPatterns.Creational.Composite.Formulario">
+  <Class Name="Beirinha.DesignPatterns.Creational.Composite.Form">
     <Position X="3.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIQAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Composite\Formulario.cs</FileName>
+      <FileName>Composite\Form.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Beirinha.DesignPatterns.Creational.Composite.TextBox">

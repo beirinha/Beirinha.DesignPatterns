@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Beirinha.DesignPatterns.Behavioral.Mediator
+﻿namespace Beirinha.DesignPatterns.Behavioral.Mediator
 {
     public class ConcreteMediator : Mediador
     {
-        private Suporte _suporte;
-        private Usuario _usuario;
+        private Support _suporte;
+        private User _usuario;
 
-        public Suporte Suporte
+        public Support Suporte
         {
             set { _suporte = value; }
         }
 
-        public Usuario Usuario
+        public User Usuario
         {
             set { _usuario = value; }
         }

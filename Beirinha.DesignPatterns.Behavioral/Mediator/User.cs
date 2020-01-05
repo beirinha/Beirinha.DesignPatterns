@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Beirinha.DesignPatterns.Behavioral.Mediator
 {
@@ -8,9 +6,9 @@ namespace Beirinha.DesignPatterns.Behavioral.Mediator
     /// <summary>
     /// Concrete Colleage
     /// </summary>
-    public class Usuario : Colleague
+    public class User : Colleague
     {
-        public Usuario(Mediador mediador) : base(mediador)
+        public User(Mediador mediador) : base(mediador)
         {
 
         }

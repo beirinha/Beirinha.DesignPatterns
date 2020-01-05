@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Beirinha.DesignPatterns.Creational.Builder
+﻿namespace Beirinha.DesignPatterns.Creational.Builder
 {
     public class Director
     {
-        public void Construct(VeiculoBuilder builder)
+        public void Construct(AutoBuilder builder)
         {
-            builder.BuildMotor();
-            builder.BuildPortas();
-            builder.BuildPneus();
+            builder.BuilGear();
+            builder.BuildDoors();
+            builder.BuildTires();
 
         }
     }
