@@ -7,6 +7,7 @@ using Beirinha.DesignPatterns.Behavioral.Observer;
 using Beirinha.DesignPatterns.Behavioral.State;
 using Beirinha.DesignPatterns.Behavioral.Strategy;
 using Beirinha.DesignPatterns.Behavioral.Template_Method;
+using Beirinha.DesignPatterns.Behavioral.Visitor;
 using System;
 
 namespace Beirinha.DesignPatterns.Behavioral
@@ -201,13 +202,32 @@ namespace Beirinha.DesignPatterns.Behavioral
 
             //#endregion
 
-            #region Template Method
+            //#region Template Method
 
-            Correction proofCorrecion = new ProofCorrection();
-            proofCorrecion.Process();
+            //Correction proofCorrecion = new ProofCorrection();
+            //proofCorrecion.Process();
 
-            Correction writingCorrection = new WritingCorrection();
-            writingCorrection.Process();
+            //Correction writingCorrection = new WritingCorrection();
+            //writingCorrection.Process();
+
+            //#endregion
+
+            #region Visitor
+
+            //Config structure
+            ObjectStructure objectStructure = new ObjectStructure();
+
+            objectStructure.Attach(new ConcreteElementA());
+            objectStructure.Attach(new ConcreteElementB());
+
+            //Create Visitors
+            ConcreteVisitor1 concreteVisitor1 = new ConcreteVisitor1();
+            ConcreteVisitor2 concreteVisitor2 = new ConcreteVisitor2();
+
+            objectStructure.Accept(concreteVisitor1);
+            objectStructure.Accept(concreteVisitor2);
+
+            Console.ReadLine();
 
             #endregion
         }

@@ -23,7 +23,7 @@ Examples and explanations about DesignPatterns.
 - [x] **State** | Alter an object's behavior when its state changes
 - [x] **Strategy** | Encapsulates an algorithm inside a class
 - [x] **Template Method** | Defer the exact steps of an algorithm to a subclass
-- [ ] **Visitor** | Defines a new operation to a class without change
+- [x] **Visitor** | Defines a new operation to a class without change
 
 ## Creational Patterns
 
