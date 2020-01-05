@@ -4,6 +4,7 @@ using Beirinha.DesignPatterns.Behavioral.Iterator;
 using Beirinha.DesignPatterns.Behavioral.Mediator;
 using Beirinha.DesignPatterns.Behavioral.Memento;
 using Beirinha.DesignPatterns.Behavioral.Observer;
+using Beirinha.DesignPatterns.Behavioral.State;
 using Beirinha.DesignPatterns.Behavioral.Strategy;
 using System;
 
@@ -161,28 +162,39 @@ namespace Beirinha.DesignPatterns.Behavioral
 
             //#endregion
 
-            #region Observer
+            //#region Observer
 
-            Balance balanco = new Balance();
-            Sale venda = new Sale(balanco);
+            //Balance balanco = new Balance();
+            //Sale venda = new Sale(balanco);
 
-            balanco.Attach(venda);
+            //balanco.Attach(venda);
 
-            balanco.Iniciar();
-            balanco.Notify();
+            //balanco.Iniciar();
+            //balanco.Notify();
 
-            balanco.Finalizar();
-            balanco.Notify();
+            //balanco.Finalizar();
+            //balanco.Notify();
 
-            venda.Iniciar();
+            //venda.Iniciar();
 
-            //After remove observer
-            balanco.Detach(venda);
+            ////After remove observer
+            //balanco.Detach(venda);
 
-            balanco.Iniciar();
-            balanco.Notify();
+            //balanco.Iniciar();
+            //balanco.Notify();
 
-            venda.Iniciar();
+            //venda.Iniciar();
+
+            //Console.ReadLine();
+
+            //#endregion
+
+            #region State
+
+            Connection connection = new Connection(new ConnectionOpened());
+
+            connection.Open();
+            connection.Close();
 
             Console.ReadLine();
 

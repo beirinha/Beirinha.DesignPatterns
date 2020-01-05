@@ -20,7 +20,7 @@ Examples and explanations about DesignPatterns.
 - [x] **Mediator** | Defines simplified communication between classes
 - [x] **Memento** | Capture and restore an object's internal state
 - [x] **Observer** | A way of notifying change to a number of classes
-- [ ] **State** | Alter an object's behavior when its state changes
+- [x] **State** | Alter an object's behavior when its state changes
 - [x] **Strategy** | Encapsulates an algorithm inside a class
 - [ ] **Template Method** | Defer the exact steps of an algorithm to a subclass
 - [ ] **Visitor** | Defines a new operation to a class without change
