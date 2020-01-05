@@ -2,6 +2,7 @@
 using Beirinha.DesignPatterns.Behavioral.Command;
 using Beirinha.DesignPatterns.Behavioral.Iterator;
 using Beirinha.DesignPatterns.Behavioral.Mediator;
+using Beirinha.DesignPatterns.Behavioral.Memento;
 using Beirinha.DesignPatterns.Behavioral.Strategy;
 using System;
 
@@ -139,7 +140,31 @@ namespace Beirinha.DesignPatterns.Behavioral
 
             //#endregion
 
+            #region Memento
+            /* Explanation 
+             * Without violating encapsulation, capture 
+             * and externalize an object's 
+             * internal state so that the object can be 
+             * restored to this state later.
+             */
 
+            //Cria o originator
+            Originator pessoa = new Originator();
+            pessoa.State = "Fechado";
+
+            //Cria o caretaker que intermedia
+            Caretaker caretaker = new Caretaker();
+            caretaker.Memento = pessoa.CreateMemento();
+
+            //Mostra estado atual
+            pessoa.State = "Aberto";
+            Console.WriteLine("Estado atual:" + pessoa.State);
+
+            //Mostra estado recuperado do memento
+            pessoa.setMemento(caretaker.Memento);
+            Console.WriteLine("Estado restaurado: " + pessoa.State);
+
+            #endregion
         }
     }
 }

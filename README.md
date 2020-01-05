@@ -1,5 +1,5 @@
 # Beirinha.DesignPatterns
-Exemplos de aplicações de padrões.
+Examples and explanations about DesignPatterns.
 
 ## Structural Patterns
 
@@ -18,7 +18,7 @@ Exemplos de aplicações de padrões.
 - [ ] **Interpreter** | A way to include language elements in a program
 - [x] **Iterator** | Sequentially access the elements of a collection
 - [x] **Mediator** | Defines simplified communication between classes
-- [ ] **Memento** | Capture and restore an object's internal state
+- [x] **Memento** | Capture and restore an object's internal state
 - [ ] **Observer** | A way of notifying change to a number of classes
 - [ ] **State** | Alter an object's behavior when its state changes
 - [x] **Strategy** | Encapsulates an algorithm inside a class
@@ -33,4 +33,5 @@ Exemplos de aplicações de padrões.
 - [x]  **Prototype** | A fully initialized instance to be copied or cloned
 - [x]  **Singleton** | A class of which only a single instance can exist
 
-### Créditos para [DevMedia](https://devmedia.com.br) onde foram realizados os estudos.
+### Credits for [DevMedia](https://devmedia.com.br) my favorite plataform to study tecnology.
+### Credits for [dofactory](https://www.dofactory.com/net/memento-design-pattern) that's amazing explanation about design patterns, check out.
