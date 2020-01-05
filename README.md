@@ -22,7 +22,7 @@ Examples and explanations about DesignPatterns.
 - [x] **Observer** | A way of notifying change to a number of classes
 - [x] **State** | Alter an object's behavior when its state changes
 - [x] **Strategy** | Encapsulates an algorithm inside a class
-- [ ] **Template Method** | Defer the exact steps of an algorithm to a subclass
+- [x] **Template Method** | Defer the exact steps of an algorithm to a subclass
 - [ ] **Visitor** | Defines a new operation to a class without change
 
 ## Creational Patterns

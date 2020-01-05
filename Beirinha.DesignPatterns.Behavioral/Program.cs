@@ -6,6 +6,7 @@ using Beirinha.DesignPatterns.Behavioral.Memento;
 using Beirinha.DesignPatterns.Behavioral.Observer;
 using Beirinha.DesignPatterns.Behavioral.State;
 using Beirinha.DesignPatterns.Behavioral.Strategy;
+using Beirinha.DesignPatterns.Behavioral.Template_Method;
 using System;
 
 namespace Beirinha.DesignPatterns.Behavioral
@@ -189,14 +190,24 @@ namespace Beirinha.DesignPatterns.Behavioral
 
             //#endregion
 
-            #region State
+            //#region State
 
-            Connection connection = new Connection(new ConnectionOpened());
+            //Connection connection = new Connection(new ConnectionOpened());
 
-            connection.Open();
-            connection.Close();
+            //connection.Open();
+            //connection.Close();
 
-            Console.ReadLine();
+            //Console.ReadLine();
+
+            //#endregion
+
+            #region Template Method
+
+            Correction proofCorrecion = new ProofCorrection();
+            proofCorrecion.Process();
+
+            Correction writingCorrection = new WritingCorrection();
+            writingCorrection.Process();
 
             #endregion
         }
